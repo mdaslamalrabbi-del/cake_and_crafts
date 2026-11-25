@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cake &amp; Craft</title>
+<meta name="description" content="Cake &amp; Craft: homemade celebration cakes in Dhaka. Bake, decorate, create. Order on WhatsApp.">
+<meta name="theme-color" content="#FBF2EC">
+<meta property="og:title" content="Cake &amp; Craft">
+<meta property="og:description" content="Homemade celebration cakes in Dhaka. Order on WhatsApp.">
+<meta property="og:image" content="img/choc.jpg">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Inter:wght@400;500;600&amp;family=Khand:wght@500;600;700&amp;family=Patrick+Hand&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<section id="loader" aria-label="Loading">
+  <div class="panel back l" id="pbl"></div><div class="panel back r" id="pbr"></div>
+  <div class="panel front l" id="pfl"></div><div class="panel front r" id="pfr"></div>
+  <div id="ldCake">
+    <svg viewBox="0 0 400 470" aria-hidden="true">
+      <defs>
+        <clipPath id="cakeClip">
+          <rect x="196" y="40" width="9" height="60" rx="4" transform="rotate(18 200 70)"/>
+          <circle cx="200" cy="118" r="32"/>
+          <circle cx="104" cy="182" r="24"/><circle cx="160" cy="176" r="24"/><circle cx="240" cy="176" r="24"/><circle cx="296" cy="182" r="24"/>
+          <rect x="44" y="184" width="312" height="50" rx="25"/>
+          <rect x="62" y="210" width="276" height="210" rx="8"/>
+          <rect x="84" y="226" width="22" height="64" rx="11"/><rect x="138" y="226" width="22" height="44" rx="11"/><rect x="190" y="226" width="22" height="78" rx="11"/><rect x="244" y="226" width="22" height="50" rx="11"/><rect x="296" y="226" width="22" height="66" rx="11"/>
+          <rect x="18" y="420" width="364" height="18" rx="9"/>
+          <rect x="172" y="430" width="56" height="36" rx="6"/>
+        </clipPath>
+      </defs>
+      <g clip-path="url(#cakeClip)">
+        <rect x="0" y="0" width="400" height="470" fill="#F6B5B0" opacity=".14"/>
+        <g id="ldFill"><rect x="0" y="0" width="400" height="470" fill="#F6B5B0"/></g>
+      </g>
+    </svg>
+  </div>
+  <div id="ldCount" aria-live="polite"><span class="sr" id="ldSr">0 percent loaded</span><span class="dg"><span></span></span><span class="dg"><span></span></span><span class="dg"><span></span></span><small>%</small></div>
+</section>
+
+<div id="curtain" aria-hidden="true">
+  <div class="panel back l"></div><div class="panel back r"></div>
+  <div class="panel front l"></div><div class="panel front r"></div>
+</div>
+
+<header class="nav" id="nav">
+  <a href="#hero" class="logo" data-go aria-label="Cake &amp; Craft home"><img src="img/logo.png" alt="Cake &amp; Craft logo" width="96" height="96"></a>
+  <div class="nav-r">
+    <button class="pill bag" id="bagBtn" aria-label="Open basket">
+      <span class="count" id="count">0</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3.5 10.5h17v9.5a1 1 0 0 1-1 1h-15a1 1 0 0 1-1-1z"/><path d="M2.5 7.5h19v3h-19z"/><path d="M12 7.5v13.5"/><path d="M12 7.3C10.5 4 7 3.6 7 5.5S10 7.3 12 7.3z"/><path d="M12 7.3c1.5-3.3 5-3.7 5-1.8S14 7.3 12 7.3z"/></svg>
+    </button>
+    <button class="pill menuBtn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span class="g"><span class="m">MENU</span><span class="c">CLOSE</span></span></button>
+  </div>
+</header>
+
+<div id="menu" aria-hidden="true">
+  <div class="glow"></div>
+  <div class="mdeco" data-sway><svg viewBox="0 0 400 420" aria-hidden="true"><use href="#cherryArt"/></svg></div>
+  <div class="mwrap">
+    <nav class="mnav" aria-label="Main">
+      <a class="mlink" href="#hero" data-go><span><b>Home<i aria-hidden="true">Home</i></b></span></a>
+      <a class="mlink" href="#cakes" data-go><span><b>Our Cakes<i aria-hidden="true">Our Cakes</i></b></span></a>
+      <a class="mlink" href="#recipe" data-go><span><b>Our Recipe<i aria-hidden="true">Our Recipe</i></b></span></a>
+      <a class="mlink" href="#moments" data-go><span><b>Moments<i aria-hidden="true">Moments</i></b></span></a>
+      <a class="mlink" href="#order" data-go><span><b>Order<i aria-hidden="true">Order</i></b></span></a>
+    </nav>
+    <div class="mfoot" id="mfoot">
+      <p class="t36 hand" style="color:var(--pink)">Say hello</p>
+      <div style="display:flex;align-items:center;gap:.8vw">
+        <a class="t32 waLink" id="mail" href="https://wa.me/8801770470421" target="_blank" rel="noopener">WhatsApp <span class="waShow">01770-470421</span></a>
+        <button class="copy" id="copyBtn" aria-label="Copy WhatsApp number">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span class="tip">Copied!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="scrim"></div>
+<aside id="drawer" aria-label="Basket" aria-hidden="true">
+  <div class="dhead"><span id="dTitle">Your basket</span><button class="dclose" id="dClose" aria-label="Close basket">&times;</button></div>
+  <div class="dbody" data-lenis-prevent>
+    <section id="stepCart">
+      <ul class="dlist" id="dList"></ul>
+      <div class="dempty" id="dEmpty">
+        <svg class="ic" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 50h64v34a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4z"/><path d="M14 38h72v12H14z"/><path d="M50 38v50"/><path d="M50 37C44 24 30 22 30 30s12 7 20 7z"/><path d="M50 37c6-13 20-15 20-7s-12 7-20 7z"/></svg>
+        <b>Nothing baked yet</b>
+        <span class="hand" style="font-size:20px">Your basket is hungry</span>
+        <a href="#cakes" class="dlink" data-go>Go pick a cake</a>
+      </div>
+      <div class="dfoot" id="cartFoot">
+        <div class="row"><span>Subtotal</span><b id="dSub">৳0</b></div>
+        <button class="dbtn" id="dCheckout">Place order</button>
+        <button class="dlink" id="dClear">Empty the basket</button>
+      </div>
+    </section>
+    <section id="stepSum" hidden>
+      <button class="dback" id="dBack">&larr; Back to basket</button>
+      <div class="scard">
+        <ul class="slist" id="sList"></ul>
+        <div class="fields">
+          <label for="oName">Your name<input id="oName" autocomplete="name" placeholder="Nabila Rahman"></label>
+          <label for="oDate">Needed on<input id="oDate" type="date" required></label>
+          <label for="oMsg" class="wide">Message on the cake<input id="oMsg" maxlength="40" autocomplete="off" placeholder="Happy birthday, Nabila"></label>
+        </div>
+        <p class="ferr" id="oErr" role="alert"></p>
+        <div class="srows">
+          <div class="row"><span>Name</span><span id="sName">Not added</span></div>
+          <div class="row"><span>Message</span><span id="sMsg">None</span></div>
+          <div class="row"><span>Date</span><span id="sDate">Pick a date</span></div>
+          <div class="row"><span>Subtotal</span><span id="sSub">৳0</span></div>
+          <div class="row"><span>Delivery in Dhaka</span><span id="sDel">৳150</span></div>
+        </div>
+        <div class="stot"><span>Total</span><b id="sTot">৳0</b></div>
+        <a class="wa" id="waBtn" href="https://wa.me/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          Order on WhatsApp
+        </a>
+        <button class="dlink" id="waCopy">Copy order text instead</button>
+        <p class="note" id="waNote">Opens WhatsApp with your order written out. We confirm within the day.</p>
+      </div>
+      <p class="note">Orders on WhatsApp <span class="waShow"></span>. All prices in BDT. Corporate cakes are priced on request.</p>
+    </section>
+  </div>
+</aside>
+
+<canvas id="trail" aria-hidden="true"></canvas>
+<a href="#order" data-go class="opill" id="opill"><img src="img/logo.png" alt="" width="44" height="44"><span>Order a cake</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></i></a>
+
+<main id="main">
+  <div id="story">
+    <div id="pin"><canvas id="cake3d" aria-label="A 3D chocolate drip cake" role="img"></canvas><img class="fallbackCake" src="img/choc.jpg" alt=""></div>
+
+    <section id="hero" class="px">
+      <h1 class="t180" data-split="chars">Happiness in <br>every slice.</h1>
+      <div class="hb">
+        <div class="arrow" data-draw="loader" data-delay=".9"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M90 14C62 6 30 16 22 46C18 60 19 72 23 86"/><path d="M11 73L23 87L36 76"/></svg></div>
+        <ul data-split="lines" data-delay=".35"><li>Homemade with love</li><li>Baked fresh to order</li></ul>
+      </div>
+      <div class="cherries" data-sway data-lean><svg viewBox="0 0 400 420" aria-hidden="true"><use href="#cherryArt"/></svg></div>
+      <div class="hr">
+        <p class="t32 med cap" data-split="lines" data-delay=".5">Soft sponge, silky buttercream and real butter in every layer, baked by hand for the moments you want to remember.</p>
+        <a href="#cakes" data-go class="btn" data-label="Discover Cakes" data-entry="1.1"></a>
+      </div>
+    </section>
+
+    <section id="recipe" class="px" aria-label="What goes into every cake">
+      <div class="stage">
+        <div class="badge"><span class="v">100<small>%</small></span><p>Homemade</p></div>
+        <div class="badge d"><span class="v">3<small>&nbsp;Layers</small></span><p>Of soft sponge</p></div>
+        <div class="badge d"><span class="v">0</span><p>Shortcuts taken</p></div>
+        <div class="badge"><span class="v">4<small>&nbsp;Sizes</small></span><p>For every party</p></div>
+      </div>
+    </section>
+
+    <section id="seq">
+      <div class="seqIn">
+        <div class="seqT">
+          <h2 class="t180" id="seqTitle">Slice</h2>
+          <p class="t36 med" id="seqLead">One whole cake, baked, layered and frosted on the day you pick it up. Soft inside, finished by hand outside.</p>
+        </div>
+        <div class="seqS">
+          <p class="t36 med" id="seqSide">Four sizes, from a little treat for two to a tall cake for the whole office.</p>
+          <a href="#cakes" data-go class="btn" id="seqBtn" data-label="Explore Cakes"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="runway" data-runway>
+      <h2 class="t180" data-split="chars">Save me a slice..</h2>
+    </section>
+  </div>
+
+  <div class="ctop"><div class="scallops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+  <section id="cakes" class="px" data-dark>
+    <div class="cin">
+      <h2 class="t180 chead"><span data-split="chars">Explore all</span><span class="burst" id="burst"><svg viewBox="-60 -60 120 120" aria-hidden="true"><path id="burstPath" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg></span><span data-split="chars" data-from="end">cakes</span></h2>
+      <div class="cgrid" id="cgrid"></div>
+    </div>
+    <div class="cdeco" data-par="-.08" data-rot="20"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M80 120v74"/><path d="M80 120C40 100 34 30 80 8c46 22 40 92 0 112z"/><path d="M80 120C60 96 58 36 80 8c22 28 20 88 0 112z"/><path d="M80 120C30 104 22 50 50 22"/><path d="M80 120c50-16 58-70 30-98"/></svg></div>
+  </section>
+
+  <section id="intro">
+    <div class="band px" data-dark>
+      <h2 class="t150" data-par=".12">Homemade cakes. Soft inside, pretty outside, made <span class="slot" id="slot"><span><span class="sw sw1" aria-hidden="true"><span>sweet</span></span><span class="sw sw2" aria-hidden="true"><span>fresh</span></span><span class="sw sw3"><span>yours</span></span></span></span>, from our kitchen.</h2>
+      <div class="doodle d1"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="56" fill="currentColor"/><circle cx="60" cy="60" r="47" fill="none" stroke="#3D2018" stroke-width="3"/><path d="M38 52c3-6 10-6 13 0M69 52c3-6 10-6 13 0" fill="none" stroke="#3D2018" stroke-width="4" stroke-linecap="round"/><path d="M36 68c8 16 40 16 48 0" fill="none" stroke="#3D2018" stroke-width="4" stroke-linecap="round"/><path d="M74 76c4 8 12 8 12 2" fill="#F6B5B0" stroke="#3D2018" stroke-width="3" stroke-linecap="round"/></svg></div>
+      <div class="doodle d2" data-par="-.06" data-rot="12"><svg viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 66L160 24L190 64L14 66Z"/><path d="M14 66V124L190 126V64"/><path d="M14 86L190 88"/><path d="M14 104L190 106"/><path d="M30 64c6-8 12-8 18 0s12 8 18 0 12-8 18 0 12 8 18 0 12-8 18 0 12 8 18 0"/><circle cx="150" cy="16" r="10"/><path d="M152 6c4-6 10-8 16-6"/></svg></div>
+      <div class="doodle d3" data-par=".08" data-rot="-10"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 104h100l-14 82H44z"/><path d="M52 106l6 78M80 106v80M108 106l-6 78"/><path d="M24 104c-8-22 14-30 22-26 0-18 22-26 34-14 12-12 34-4 34 14 8-4 30 4 22 26z"/><path d="M48 70c4-20 26-30 32-30s28 10 32 30"/><circle cx="80" cy="28" r="12"/><path d="M82 16c2-8 8-12 14-12"/></svg></div>
+      <div class="inote" data-par=".1">
+        <div class="arrow" data-draw="scroll" data-start="top 90%" data-end="top 50%"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M90 14C62 6 30 16 22 46C18 60 19 72 23 86"/><path d="M11 73L23 87L36 76"/></svg></div>
+        <p>thats why every party asks for seconds !</p>
+      </div>
+    </div>
+    <div class="cbottom"><div class="scallops" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+  </section>
+
+  <section id="mission">
+    <h2 class="t180" data-split="chars">You deserve a cake made just for you.</h2>
+    <div class="mrow">
+      <div class="mleft">
+        <p class="t36 med" data-split="lines" data-delay=".15">We bake in small batches and only to order, so every cake reaches your table fresh, soft and exactly the way you pictured it.</p>
+        <a href="#order" data-go class="btn" data-label="Order Your Cake"></a>
+      </div>
+      <div class="gallery" id="gallery">
+        <div class="pola p1" data-r="12"><img src="img/choc.jpg" alt="Chocolate buttercream cake with piped rosettes and a chocolate drip"></div>
+        <div class="pola p2" data-r="-2"><img src="img/pink.jpg" alt="Pink layer cake cut open, white frosting and sprinkles"></div>
+        <div class="pola p3" data-r="-9"><img src="img/cherry.jpg" alt="Slice of vanilla layer cake with jam and fresh cherries"></div>
+      </div>
+      <div class="mdeco2" data-par="-.08" data-rot="20"><svg viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 66L160 24L190 64L14 66Z"/><path d="M14 66V124L190 126V64"/><path d="M14 86L190 88"/><path d="M14 104L190 106"/><circle cx="150" cy="16" r="10"/></svg></div>
+    </div>
+  </section>
+
+  <section id="moments">
+    <div class="px mohead">
+      <h2 class="t180" data-split="chars">Sweet moments !</h2>
+      <div class="arrows"><button class="rb prev" data-step="-1" aria-label="Previous"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button><button class="rb next" data-step="1" aria-label="Next"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button></div>
+    </div>
+    <div class="mview" id="mview"><div class="mtrack" id="mtrack"></div></div>
+    <div class="arrows mob"><button class="rb prev" data-step="-1" aria-label="Previous"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button><button class="rb next" data-step="1" aria-label="Next"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button></div>
+    <div class="mdeco3" data-par=".1" data-rot="10"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 104h100l-14 82H44z"/><path d="M52 106l6 78M80 106v80M108 106l-6 78"/><path d="M24 104c-8-22 14-30 22-26 0-18 22-26 34-14 12-12 34-4 34 14 8-4 30 4 22 26z"/><circle cx="80" cy="56" r="12"/></svg></div>
+  </section>
+
+  <section id="order">
+    <div class="oin">
+      <div class="op l">
+        <i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt e"></i>
+        <p class="lab" data-split="lines" data-delay=".1">fresh from our oven</p>
+        <h2 class="t180 oh" data-split="chars">The box of joy.</h2>
+        <p class="b" data-split="lines" data-delay=".25">Pick a size, tell us your name and the date, and send the order on WhatsApp. We confirm within the day.</p>
+        <form class="qform" id="qForm" novalidate>
+          <div class="qgroup"><span class="qlab" id="qSizeLab">Size</span><div class="sizes" id="qSizes" role="radiogroup" aria-labelledby="qSizeLab"></div></div>
+          <div class="fields">
+            <label for="qName">Your name<input id="qName" autocomplete="name" placeholder="Nabila Rahman"></label>
+            <label for="qDate">Needed on<input id="qDate" type="date"></label>
+            <label for="qMsg" class="wide">Message on the cake<input id="qMsg" maxlength="40" autocomplete="off" placeholder="Happy birthday, Nabila"></label>
+          </div>
+          <p class="ferr" id="qErr" role="alert"></p>
+          <div class="qsum">
+            <div class="qhead"><div><b class="qcake" id="qCake">Chocolate Drip Cake</b><span class="qsize" id="qSizeTxt">Medium Cake, 2 lb</span></div><span id="qPrice">৳1,300</span></div>
+            <div class="srows">
+              <div class="row"><span>Name</span><span id="qNameTxt">Not added</span></div>
+              <div class="row"><span>Message</span><span id="qMsgTxt">None</span></div>
+              <div class="row"><span>Date</span><span id="qDateTxt">Pick a date</span></div>
+              <div class="row"><span>Delivery in Dhaka</span><span id="qDel">৳150</span></div>
+            </div>
+            <div class="stot"><span>Total</span><b id="qTot">৳1,450</b></div>
+            <a class="wa" id="qWa" href="https://wa.me/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg> Order on WhatsApp</a>
+            <button type="button" class="dlink" id="qCopy">Copy order text instead</button>
+            <p class="note" id="qNote">Opens WhatsApp with your order written out. Just press send.</p>
+          </div>
+        </form>
+      </div>
+      <div class="op r" id="oPanel">
+        <span class="owash" id="oWash"></span>
+        <i class="bolt a"></i><i class="bolt b"></i><i class="bolt c"></i><i class="bolt e"></i>
+        <p class="oname" id="oName">Chocolate Drip Cake</p>
+        <div class="ostage" id="oStage">
+          <canvas id="oCanvas" aria-label="3D cake, use the arrows to change flavour" role="img"></canvas>
+          <img class="fb" src="img/choc.jpg" alt="">
+          <button class="rb prev" id="oPrev" aria-label="Previous flavour"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button>
+          <button class="rb next" id="oNext" aria-label="Next flavour"><span class="blob"></span><svg viewBox="0 0 14 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 6H1M6 1L1 6l5 5"/></svg></button>
+        </div>
+        <div class="ocart"><span class="toast" id="oToast">Added to basket</span><button class="addcart" id="oCart"><span aria-hidden="true">+</span> Add to cart</button></div>
+      </div>
+    </div>
+    <div class="obottom"><div class="scallops cream" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+  </section>
+</main>
+
+<div id="footer">
+  <div class="fwrap" id="fwrap">
+    <footer>
+      <canvas id="game" aria-label="Sweet slicing game: swipe across the flying sweets" role="img"></canvas>
+      <div class="fbig">
+        <div class="fc a" data-sway><svg viewBox="0 0 400 420" aria-hidden="true"><use href="#cherryArt"/></svg></div>
+        <div class="fc b" data-sway><svg viewBox="0 0 400 420" aria-hidden="true"><use href="#cherryArt"/></svg></div>
+        <h2>Cake &amp; Craft</h2>
+      </div>
+      <div class="fcols px">
+        <div><h3>Homemade with love</h3><p>Bake, decorate, create. Celebration cakes made to order in Dhaka.</p></div>
+        <div><h3>Explore</h3><ul><li><a href="#recipe" data-go>Our recipe</a></li><li><a href="#cakes" data-go>Cakes</a></li><li><a href="#moments" data-go>Moments</a></li><li><a href="#order" data-go>Order a cake</a></li></ul></div>
+        <div><h3>Contact</h3><ul><li>WhatsApp: <a class="waLink" href="https://wa.me/" target="_blank" rel="noopener"><span class="waShow"></span></a></li><li>Facebook: Cake &amp; Craft</li><li>Orders 10am to 8pm, every day</li></ul></div>
+      </div>
+      <div class="fbar px">
+        <p>&copy; 2026 Cake &amp; Craft. All prices in BDT, Dhaka.</p>
+        <div class="score" id="score"><span class="k">Score</span><span class="n" id="scoreN">0</span><span class="sep"></span><span class="bd" id="bombs"><i></i><i></i><i></i></span><button class="freeze" id="freeze" aria-pressed="false">Freeze</button></div>
+      </div>
+      <div class="slash" id="slash" aria-hidden="true"><div class="scrim"></div><div class="line"></div><div class="stk"><span style="position:relative;display:block"><span class="wd t">Slice activated</span><span class="wd b">Slice activated</span></span><span class="sub">swipe to slice the sweets</span></div></div>
+    </footer>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="cherryArt" fill="currentColor">
+      <g data-crown>
+        <path data-leaf d="M214 70C236 26 300 8 352 30C330 78 268 98 214 70Z"/>
+        <path d="M214 70C190 150 150 210 126 268" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+        <path d="M214 70C232 150 258 210 272 282" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round"/>
+        <circle cx="118" cy="318" r="74"/>
+        <circle cx="278" cy="334" r="70"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<!-- libraries (pinned versions) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<!-- site scripts: order matters -->
+<script src="js/kit.js"></script>
+<script src="js/app.js"></script>
+<script src="js/scenes.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
